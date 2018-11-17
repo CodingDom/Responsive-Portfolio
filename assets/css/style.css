@@ -1,0 +1,263 @@
+/* Setting up the main defaults of the page */
+html,body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777777;
+    margin: 0;
+    padding: 0;
+    line-height: 32px;
+}
+
+/* Adding flavor to the webpage */
+body {
+    background-image: url("../images/hex.png");
+}
+
+/* Where my name and the navigation bar resides */
+header {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #ccc;
+    z-index: 1000;
+}
+
+/* Mainly used for my name */
+h1 {
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    color: #4aaaa5;
+    padding: 10px 30px;
+}
+
+
+/* Adjusting size of the contents within my header to match my main content */
+.heading {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* The styling for my name */
+.name {
+    color: #fff;
+    background-color: #4aaaa5;
+    line-height: 90px;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    padding: 0 20px 0 20px;
+    float: left;
+}
+
+/* My Navigation Bar */
+/* I used #E5E5E5 instead of #7777772d since it's compatible with my other browsers*/
+/* Had to use an id instead of the nav tag since the colors didn't seem to change when using the tag */
+#Nav {
+    color: #E5E5E5;
+    font-size: 20px;
+    float: right;
+    margin: 30px 0;
+    right: 0;
+}
+
+/* Editing the links to not have underlines, and made them darker than the | separators */
+#Nav a {
+    color: #777777; /* Would rather use #B4B4B4 */
+    text-decoration: none;
+    padding: 0 7px;
+}
+
+/* Just to add a nice design under the anchors */
+#Nav a:hover {
+    border-bottom-style: solid; 
+    border-bottom-color: #4AC199;
+}
+
+/* To keep the border design under the anchor resembling the current page */
+#currentPage {
+    border-bottom-style: solid; 
+    border-bottom-color: #4AC199;
+}
+
+/* Designing and sizing of the background for the main content */
+.contentHolder {
+    width: 960px;
+    margin: 120px auto;
+    position: relative;
+    background: white;
+    border-style: solid;
+    border-width: thin;
+    border-color: #ccc;
+}
+
+/* Setting up the boundaries of the main content and adding the border design udner the heading*/
+.content {
+    margin: 10px 30px;
+    padding: 20px 0;
+    border-top: solid;
+    border-top-color: #E5E5E5;
+}
+
+/* Margin used to align picture with text while float was used to wrap the text around the image */
+#profilePic {
+    float: left;
+    margin-right: 25px;
+    margin-top: 7px;
+    box-shadow: 0 0 5px 5px #E5E5E5;
+}
+
+/* Making sure the p tag sticks towards the top of the content */
+.content p {
+    margin-top: 0;
+}
+
+/* Individual headnigs for each page */
+/* Used margin-bottom to provide a nice amount of spacing between the heading and the content */
+h2 {
+    margin-bottom: 5px;
+}
+
+/* Making sure the border of my inputs/textarea isn't too dark nor thick */
+/* Made the sizing align with the border above the main content */
+input,textarea {
+    width: 100%;
+    font-size: 20px;
+    color: #777777;
+    border-color: #E5E5E5;
+    border-style: solid;
+    border-width: thin;
+}
+
+/* Making sure the style stays the same and adding effects to other browsers */
+textarea:focus, input:focus {
+    color: #777777;
+    border-color: #4AC199;
+}
+/* Making sure the text area has a nice default size for aesthetic purposes
+and because that's how the homework example looks.
+*/
+/* Made it so the textarea can't be resized by people viewing the page */
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+/* Used 890 width instead of 100% to compensate for the 10px padding */
+/* (100%=900px on my page) */
+input {
+    width: 890px;
+    padding: 10px 0 10px 10px;
+}
+
+/* Setting up the placeholder text color for the most popular browsers */
+::placeholder {
+    color: #E5E5E5;
+}
+
+::-webkit-input-placeholder {
+    color: #E5E5E5;
+}
+
+:-ms-input-placeholder {
+    color: #E5E5E5
+}
+
+/* Used to stylize the submit button, also used an id for when it's time to add javascript */
+#submit {
+    color: white;
+    background: #4aaaa5;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    line-height: 20px;
+    width: 115px;
+}
+
+/* Added some hover effects to sprinkle in some extra style on the button */
+#submit:hover {
+    cursor: pointer;
+    background-color: #4AC199;
+}
+
+/* Used for setting up the default design for the gallery navigation of my portfolio */
+.images {
+    height: 150px;
+    width: 250px;
+    margin-right: 35px;
+    margin-bottom: 30px;
+    display: inline-block;
+    /* float: left; */
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+}
+
+/* Used to give an overlay/button type of effect to the gallery so viewers will know they're accessible */
+.images:hover {
+    cursor: pointer;
+    box-shadow: 0 0 3px 2px #4AC199;
+}
+
+/* Changed the background of the text to stand out from the non-hovered items */
+.images:hover .imageLabel {
+    background-color: #4AC199;
+}
+
+.images:hover .fading {
+    opacity: 0.5;
+}
+
+/* The smaller width causes the images to be in columns of two */
+/* The overflow is set to auto to allow the main content's background to include the gallery */
+.imageContainer {
+    width: 70%;
+    overflow: auto;
+    padding: 3px 0 0 3px;
+}
+
+/* Attempting to make my own carousel */
+.fading {
+    position: relative;
+    z-index: 5;
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5 ease-in-out;
+}
+
+.fadeEffect {
+    z-index: 0;
+    position: absolute;
+    bottom: 0px;
+    opacity: 1;
+}
+
+/* Designing the banner of text along the gallery thumnbnails */
+.imageLabel {
+    color: #fff;
+    background: #4aaaa5;
+    z-index: 100;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    line-height: 40px;
+    bottom: 60px;
+    }
+
+/* Designs and placement for my page's footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #666666;
+    border-top: 8px solid #4aaaa5;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    font-size: 9px;
+    z-index: 1000;
+}
