@@ -85,6 +85,7 @@ h1 {
 .contentHolder {
     width: 960px;
     margin: 120px auto;
+    min-height: calc(100vh - 70px);
     position: relative;
     background: white;
     border-style: solid;
@@ -147,7 +148,7 @@ textarea {
 /* Used 890 width instead of 100% to compensate for the 10px padding */
 /* (100%=900px on my page) */
 input {
-    width: 890px;
+    width: 99%;
     padding: 10px 0 10px 10px;
 }
 
@@ -260,4 +261,63 @@ input {
     padding: 5px;
     font-size: 9px;
     z-index: 1000;
+}
+
+/* 
+Window Size: 1073, 1160  
+Content Size: 648, 478  
+Whitespace left of name: 55,90 
+*/
+
+@media screen and (max-width: 980px) {
+    .heading {
+        width: 100%;
+        margin-left: 55px;
+    }
+    #Nav {
+        margin-right: 60px;
+    }
+    .contentHolder {
+        width: 100%;
+        max-width: 648px;
+        margin-left: 55px;
+    }
+}
+
+/* 
+Window Size: 1073, 1160  
+Content Size: 648, 478  
+Whitespace left of name: 55,90 
+*/
+@media screen and (max-width: 768px) {
+    .contentHolder {
+        width: 100%;
+        max-width: 710px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .header {
+        position: static;
+    }
+    .heading {
+        margin: 0;
+        padding: 0;
+    }
+    .name {
+        width: 100%;
+        line-height: normal;
+        padding: 0;
+        float: none;
+    }
+    #Nav {
+        clear: both;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .contentHolder {
+        width: 100%;
+        max-width: 535px;
+        margin: auto;
+    }
 }
