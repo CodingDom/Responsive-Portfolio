@@ -86,6 +86,7 @@ h1 {
     width: 960px;
     margin: 120px auto;
     min-height: calc(100vh - 70px);
+    padding: 30px;
     position: relative;
     background: white;
     border-style: solid;
@@ -101,6 +102,13 @@ h1 {
     border-top-color: #E5E5E5;
 }
 
+/* Individual headnigs for each page */
+/* Used margin-bottom to provide a nice amount of spacing between the heading and the content */
+h2 {
+    margin-bottom: 5px;
+}
+
+/* About Page */
 /* Margin used to align picture with text while float was used to wrap the text around the image */
 #profilePic {
     float: left;
@@ -114,81 +122,12 @@ h1 {
     margin-top: 0;
 }
 
-/* Individual headnigs for each page */
-/* Used margin-bottom to provide a nice amount of spacing between the heading and the content */
-h2 {
-    margin-bottom: 5px;
-}
-
-/* Making sure the border of my inputs/textarea isn't too dark nor thick */
-/* Made the sizing align with the border above the main content */
-input,textarea {
-    width: 100%;
-    font-size: 20px;
-    color: #777777;
-    border-color: #E5E5E5;
-    border-style: solid;
-    border-width: thin;
-}
-
-/* Making sure the style stays the same and adding effects to other browsers */
-textarea:focus, input:focus {
-    color: #777777;
-    border-color: #4AC199;
-}
-/* Making sure the text area has a nice default size for aesthetic purposes
-and because that's how the homework example looks.
-*/
-/* Made it so the textarea can't be resized by people viewing the page */
-textarea {
-    height: 200px;
-    resize: none;
-}
-
-/* Used 890 width instead of 100% to compensate for the 10px padding */
-/* (100%=900px on my page) */
-input {
-    width: 99%;
-    padding: 10px 0 10px 10px;
-}
-
-/* Setting up the placeholder text color for the most popular browsers */
-::placeholder {
-    color: #E5E5E5;
-}
-
-::-webkit-input-placeholder {
-    color: #E5E5E5;
-}
-
-:-ms-input-placeholder {
-    color: #E5E5E5
-}
-
-/* Used to stylize the submit button, also used an id for when it's time to add javascript */
-#submit {
-    color: white;
-    background: #4aaaa5;
-    font-size: 20px;
-    text-align: center;
-    margin-top: 10px;
-    padding: 10px;
-    border: none;
-    line-height: 20px;
-    width: 115px;
-}
-
-/* Added some hover effects to sprinkle in some extra style on the button */
-#submit:hover {
-    cursor: pointer;
-    background-color: #4AC199;
-}
+/* Portfolio Page */
 
 /* Used for setting up the default design for the gallery navigation of my portfolio */
 .images {
     height: 150px;
     width: 250px;
-    margin-right: 35px;
     margin-bottom: 30px;
     display: inline-block;
     /* float: left; */
@@ -248,6 +187,82 @@ input {
     bottom: 60px;
     }
 
+
+/* Contact Page */
+
+form ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+form li {
+    margin-bottom: 10px;
+}
+/* Making sure the border of my inputs/textarea isn't too dark nor thick */
+
+
+input[type="email"],input[type="text"],textarea {
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #E5E5E5;
+    color: #777777;
+}
+
+/* Making sure the style stays the same and adding effects to other browsers */
+textarea:focus, input:focus {
+    color: #777777;
+    border-color: #4AC199;
+}
+/* Making sure the text area has a nice default size for aesthetic purposes
+and because that's how the homework example looks.
+*/
+/* Made it so the textarea can't be resized by people viewing the page */
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+/* Used 890 width instead of 100% to compensate for the 10px padding */
+/* (100%=900px on my page) */
+/* input {
+    padding: 0 10px;
+} */
+
+/* Setting up the placeholder text color for the most popular browsers */
+::placeholder {
+    color: #E5E5E5;
+}
+
+::-webkit-input-placeholder {
+    color: #E5E5E5;
+}
+
+:-ms-input-placeholder {
+    color: #E5E5E5
+}
+
+/* Used to stylize the submit button, also used an id for when it's time to add javascript */
+#submit {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px 30px;
+    padding: 10px;
+    background: #4aaaa5;
+    border: 0 none;
+}
+
+/* Added some hover effects to sprinkle in some extra style on the button */
+#submit:hover {
+    cursor: pointer;
+    background-color: #4AC199;
+}
+    
 /* Designs and placement for my page's footer */
 .footer {
     position: fixed;

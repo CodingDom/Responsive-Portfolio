@@ -8,32 +8,40 @@
     </head>
 
     <body>
-            <header>
-                <div class="heading">
-                    <h1 class="name">Dominic Smith</h1>
-                    <nav id="Nav">
-                        <a href="index.html">About</a> |
-                        <a href="portfolio.html">Portfolio</a> |
-                        <a id="currentPage" href="contact.html">Contact</a>
-                    </nav>
-                </div>
-            </header>
-            <div class="contentHolder">
-                <h1>Contact</h1>
-                <div class="content">
-                    <form>
-                        <h2>Name</h2>
-                        <input placeholder="John Doe">
-                        <h2>Email</h2>
-                        <input placeholder="example@gmail.com">
-                        <h2>Message</h2>
-                        <textarea></textarea>
-                        <button id="submit">Submit</button>
-                    </form>
-                </div>
+        <header>
+            <div class="heading">
+                <h1 class="name">Dominic Smith</h1>
+                <nav id="Nav">
+                    <a href="index.html">About</a> |
+                    <a href="portfolio.html">Portfolio</a> |
+                    <a id="currentPage" href="contact.html">Contact</a>
+                </nav>
             </div>
-            <div class="footer">
-                Copyright &copy;
+        </header>
+        <div class="contentHolder">
+            <h1>Contact</h1>
+            <div class="content">
+                <form>
+                    <ul>
+                        <li>
+                            <label>Name</label>
+                            <input type="text" name="text" placeholder="John Doe">
+                        </li>
+                        <li>
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="example@gmail.com">
+                        </li>
+                        <li>
+                            <label>Message</label>
+                            <textarea id="message" name="message" required="required"></textarea>
+                        </li>
+                    </ul>
+                    <input id="submit" type="submit">
+                </form>
             </div>
-        </body>
+        </div>
+        <div class="footer">
+            Copyright &copy;
+        </div>
+    </body>
 </html>    
