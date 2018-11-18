@@ -32,6 +32,7 @@ header {
   max-width: 960px;
   margin: 0 auto;
   clear: both;
+  position: relative;
 }
 
 header .container {
@@ -104,12 +105,11 @@ h1 {
 /* Designing and sizing of the background for the main content */
 #contentHolder {
     padding-top: 130px;
-    min-height: calc(100vh - 70px);
 }
 
 /* Setting up the boundaries of the main content and adding the border design udner the heading*/
 .content {
-    float: left;
+    /* float: left; */
     width: 100%;
     max-width: 960px;
     padding: 20px;
@@ -287,20 +287,21 @@ textarea {
 }
     
 /* Designs and placement for my page's footer */
-.footer {
+.wrapper {
     position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #666666;
-    border-top: 8px solid #4aaaa5;
-    text-align: center;
-    color: white;
-    padding: 0;
-    margin: 0;
-    font-size: 9px;
-    max-width: none;
+    min-height: calc(100vh - 48px);
 }
+
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: #777;
+    border-top: 8px solid #4aaaa5;
+    color: #fff;
+    text-align: center;
+    font-size: 9px;
+  }
 
 /* 
 Window Size: 1073, 1160  
