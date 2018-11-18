@@ -14,15 +14,8 @@ body {
 
 /* Where my name and the navigation bar resides */
 header {
-    background-color: #fff;
-    position: fixed;
-    width: 100%;
     height: 90px;
     top: 0;
-    border-bottom-style: solid;
-    border-bottom-width: thin;
-    border-bottom-color: #ccc;
-    margin-bottom: 30px;
     z-index: 1000;
 }
 
@@ -31,6 +24,17 @@ header {
   max-width: 960px;
   margin: 0 auto;
   clear: both;
+}
+
+header .container {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #ccc;
+    margin-bottom: 30px;
+    max-width: none;
 }
 
 /* For the page titles */
@@ -104,7 +108,7 @@ h1 {
 /* Setting up the boundaries of the main content and adding the border design udner the heading*/
 .content {
     float: left;
-    width: 100%;
+    /* width: 100%; */
     max-width: 960px;
     margin: 0 0 40px;
     padding: 30px;
@@ -147,6 +151,7 @@ h2 {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     opacity: 0;
+    margin-right: 40px;
 }
 
 /* Used to give an overlay/button type of effect to the gallery so viewers will know they're accessible */
@@ -170,6 +175,10 @@ h2 {
     width: 70%;
     overflow: auto;
     padding: 3px 0 0 3px;
+}
+
+.images:nth-child(even) {
+    margin-right: 0;
 }
 
 /* Attempting to make my own carousel */
@@ -263,7 +272,7 @@ textarea {
     color: white;
     font-size: 18px;
     text-align: center;
-    margin-top: 10px 30px;
+    margin-top: 10px;
     padding: 10px;
     background: #4aaaa5;
     border: 0 none;
@@ -305,9 +314,11 @@ Whitespace left of name: 55,90
     #Nav {
         margin-right: 60px;
     }
-    .content {
+    .container {
         width: 100%;
         max-width: 648px;
+    }
+    .content { 
         margin-left: 55px;
     }
 }
@@ -318,7 +329,11 @@ Content Size: 648, 478
 Whitespace left of name: 55,90 
 */
 @media screen and (max-width: 768px) {
-    .content {
+    .images {
+        margin-right: 0;
+    }
+
+    .container {
         width: 100%;
         max-width: 710px;
     }
@@ -326,9 +341,14 @@ Whitespace left of name: 55,90
 
 @media screen and (max-width: 640px) {
     #contentHolder {
-        margin: 0;
+        /* max-width: 535px; */
+        margin: auto;
         padding: 0;
     }
+
+    /* .container {
+        max-width: 535px;
+    } */
 
     header {
         position: static;
@@ -337,6 +357,7 @@ Whitespace left of name: 55,90
 
     header .container {
         height: 100%;
+        margin: 0;
         position: relative;
     }
 
@@ -361,9 +382,18 @@ Whitespace left of name: 55,90
         margin: 0 auto;
         text-align: center;
     }
+
     .content {
-        width: 100%;
-        max-width: 535px;
+        /* width: 100%; */
+        margin: 20px;
+        margin-bottom: 50px;
+    }
+
+    .imageContainer {
         margin: auto;
+    }
+
+    .images {
+        margin: 0 0 30px 0;
     }
 }

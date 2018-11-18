@@ -24,7 +24,7 @@ function createGalleries() {
     var frame = document.createElement('div');
     frame.className = "images";
     frame.style.backgroundImage = "url('assets/images/"+list[0]+"')";
-    frame.style.marginRight = currGal%2==0 && "40px"; //For every even item, set right margin to 40px
+    // frame.style.marginRight = currGal%2==0 && "40px"; //For every even item, set right margin to 40px
     var gallery = document.createElement('img')
     gallery.className = "fading";
     gallery.style.height = "100%";
