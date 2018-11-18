@@ -333,13 +333,14 @@ Whitespace left of name: 55,90
         width: 100%;
         padding: 0;        
     }
+
+    .imageContainer {
+        width: 100%;
+        max-width: 560px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .images {
-        margin-right: 0;
-    }
-
     header {
         padding: 0 20px;
     }
@@ -361,6 +362,14 @@ Whitespace left of name: 55,90
     content {
         width: 100%;
     }
+
+    .imageContainer {
+        width: 100%;
+    }
+
+    /* .images {
+        margin-right: 0;
+    } */
 }
 
 @media screen and (max-width: 640px) {
@@ -414,12 +423,20 @@ Whitespace left of name: 55,90
     }
 
     .imageContainer {
-        margin: auto;
+        margin: 0;
+        width: 100%;
+        padding: 3px 3px 0 3px;
     }
 
     .images {
-        width: 100%;
-        max-width: 250px;
+        width: calc(100% - 6px); /* Aesthetic purposes */
+        height: calc(50vw);
+        max-width: none;
         margin: 0 0 30px 0;
+    }
+    
+    .images img {
+        height: 125%;
+        bottom: 0;
     }
 }
