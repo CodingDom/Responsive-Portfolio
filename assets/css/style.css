@@ -5,6 +5,7 @@ html,body {
     margin: 0;
     padding: 0;
     line-height: 32px;
+    height: 100%;
 }
 
 /* Adding flavor to the webpage */
@@ -109,14 +110,14 @@ h1 {
 /* Setting up the boundaries of the main content and adding the border design udner the heading*/
 .content {
     float: left;
-    /* width: 100%; */
+    width: 100%;
     max-width: 960px;
-    margin: 0 0 40px;
-    padding: 30px;
+    padding: 20px;
     background: #fff;
     border-style: solid;
     border-width: thin;
     border-color: #ccc;
+    box-sizing: border-box;
 }
 
 /* Individual headnigs for each page */
@@ -287,7 +288,7 @@ textarea {
     
 /* Designs and placement for my page's footer */
 .footer {
-    /* position: fixed; */
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -308,44 +309,60 @@ Whitespace left of name: 55,90
 */
 
 @media screen and (max-width: 980px) {
-    /* .heading {
-        width: 100%;
-        margin-left: 55px;
-    } */
-    #logo {
-        margin: auto;
+    header {
+        padding: 0 20px;
     }
+
+    header nav {
+        padding-right: 20px;
+    }
+
     .container {
         width: 100%;
-        max-width: 980px;
+        max-width: 960px;
     }
-    .content { 
-        margin: 0 20px;
+
+    #contentHolder {
+        padding-right: 20px;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+
+    content {
+        width: 100%;
+        padding: 0;        
     }
 }
 
-/* 
-Window Size: 1073, 1160  
-Content Size: 648, 478  
-Whitespace left of name: 55,90 
-*/
 @media screen and (max-width: 768px) {
     .images {
         margin-right: 0;
+    }
+
+    header {
+        padding: 0 20px;
+    }
+
+    header .container {
+        margin: auto;
+        max-width: 768;
+    }
+
+    header nav {
+        padding-right: 20px;
     }
 
     .container {
         width: 100%;
         max-width: 768px;
     }
+
+    content {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 640px) {
-    #contentHolder {
-        /* max-width: 535px; */
-        margin: auto;
-        padding: 0;
-    }
 
     /* .container {
         max-width: 535px;
@@ -354,6 +371,7 @@ Whitespace left of name: 55,90
     header {
         position: static;
         margin: 0;
+        padding: 0;
     }
 
     header .container {
@@ -384,10 +402,14 @@ Whitespace left of name: 55,90
         text-align: center;
     }
 
+    #contentHolder {
+        padding: 20px;
+    }
+
     .content {
         /* width: 100%; */
-        margin: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
+        padding: 0 10px 10px;
     }
 
     .imageContainer {
