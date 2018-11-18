@@ -285,7 +285,8 @@ textarea {
     border-top: 8px solid #4aaaa5;
     text-align: center;
     color: white;
-    padding: 5px;
+    padding: 0;
+    margin: 0;
     font-size: 9px;
     max-width: none;
 }
@@ -324,23 +325,41 @@ Whitespace left of name: 55,90
 }
 
 @media screen and (max-width: 640px) {
-    .header {
-        position: static;
+    #contentHolder {
+        margin: 0;
+        padding: 0;
     }
+
+    header {
+        position: static;
+        margin: 0;
+    }
+
+    header .container {
+        height: 100%;
+        position: relative;
+    }
+
     .heading {
         margin: 0;
         padding: 0;
     }
-    .name {
+    
+    #logo {
         width: 100%;
         line-height: normal;
+        height: 60%;
         padding: 0;
         float: none;
+        margin: 0;
+        display: block;
     }
     #Nav {
+        width: 100%;
         clear: both;
         padding: 0;
         margin: 0 auto;
+        text-align: center;
     }
     .content {
         width: 100%;
