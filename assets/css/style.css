@@ -22,14 +22,25 @@ header {
     border-bottom-style: solid;
     border-bottom-width: thin;
     border-bottom-color: #ccc;
+    margin-bottom: 30px;
     z-index: 1000;
 }
 
-/* Mainly used for my name */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  clear: both;
+}
+
+/* For the page titles */
 h1 {
     font-family: 'Georgia', Times, 'Times New Roman', serif;
     color: #4aaaa5;
-    padding: 10px 30px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    line-height: 49px;
+    border-bottom: 3px solid #E5E5E5;
 }
 
 
@@ -40,16 +51,19 @@ h1 {
 }
 
 /* The styling for my name */
-.name {
-    color: #fff;
-    background-color: #4aaaa5;
-    line-height: 90px;
-    text-align: center;
-    position: relative;
-    margin: 0;
-    padding: 0 20px 0 20px;
+#logo {
     float: left;
-}
+    width: 250px;
+    height: 90px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 90px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background: #4aaaa5;
+  }
 
 /* My Navigation Bar */
 /* I used #E5E5E5 instead of #7777772d since it's compatible with my other browsers*/
@@ -82,24 +96,22 @@ h1 {
 }
 
 /* Designing and sizing of the background for the main content */
-.contentHolder {
-    width: 960px;
-    margin: 120px auto;
+#contentHolder {
+    padding-top: 130px;
     min-height: calc(100vh - 70px);
-    padding: 30px;
-    position: relative;
-    background: white;
-    border-style: solid;
-    border-width: thin;
-    border-color: #ccc;
 }
 
 /* Setting up the boundaries of the main content and adding the border design udner the heading*/
 .content {
-    margin: 10px 30px;
-    padding: 20px 0;
-    border-top: solid;
-    border-top-color: #E5E5E5;
+    float: left;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 0 40px;
+    padding: 30px;
+    background: #fff;
+    border-style: solid;
+    border-width: thin;
+    border-color: #ccc;
 }
 
 /* Individual headnigs for each page */
@@ -265,7 +277,7 @@ textarea {
     
 /* Designs and placement for my page's footer */
 .footer {
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;
@@ -275,7 +287,7 @@ textarea {
     color: white;
     padding: 5px;
     font-size: 9px;
-    z-index: 1000;
+    max-width: none;
 }
 
 /* 
@@ -292,7 +304,7 @@ Whitespace left of name: 55,90
     #Nav {
         margin-right: 60px;
     }
-    .contentHolder {
+    .content {
         width: 100%;
         max-width: 648px;
         margin-left: 55px;
@@ -305,7 +317,7 @@ Content Size: 648, 478
 Whitespace left of name: 55,90 
 */
 @media screen and (max-width: 768px) {
-    .contentHolder {
+    .content {
         width: 100%;
         max-width: 710px;
     }
@@ -330,7 +342,7 @@ Whitespace left of name: 55,90
         padding: 0;
         margin: 0 auto;
     }
-    .contentHolder {
+    .content {
         width: 100%;
         max-width: 535px;
         margin: auto;
