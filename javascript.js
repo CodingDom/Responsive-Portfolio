@@ -1,10 +1,10 @@
 // My carousel galleries
 var galleries = {
-    "Hangman":["hangman.png","hangman2.png","hangman3.png"],
-    "RPG Game":["abstract4.jpg","abstract5.jpg","cloudy.png"],
-    "Trivia Game":["fish.jpg","idk.jpg","diamond.jpg"],
-    "Rock Paper Scissors":["football.jpg","basketball.jpg","ball.jpg"],
-    "Rutgers Info Widget":["bear.jpg","wolf.jpg","tiger.jpg"]
+    "Hangman":{link:'https://codingdom.github.io/Word-Guess-Game/',images:["hangman3.png","hangman2.png","hangman.png"]},
+    "RPG Game":{images:["abstract4.jpg","abstract5.jpg","cloudy.png"]},
+    "Trivia Game":{images:["fish.jpg","idk.jpg","diamond.jpg"]},
+    "Rock Paper Scissors":{images:["football.jpg","basketball.jpg","ball.jpg"]},
+    "Rutgers Info Widget":{images:["bear.jpg","wolf.jpg","tiger.jpg"]}
 };
 
 //Creates shortcut for grabbing elements
@@ -30,7 +30,7 @@ gallery - The img that is fading
 images - The array of images for that specific carousel
 originStyle - Used to save the style for when I reset the inline css of the fading img
 */
-function carousel(gallery,images) {
+function carousel(gallery,images,link) {
     //console.log(gallery,static,images);
 
     //To fix the css after the carousel pauses
@@ -67,12 +67,19 @@ function carousel(gallery,images) {
     gallery.addEventListener('webkitTransitionEnd', function( event ) {moveCarousel();}, false );
     gallery.addEventListener('mozTransitionEnd', function( event ) {moveCarousel();}, false );
     gallery.addEventListener('oTransitionEnd', function( event ) {moveCarousel();}, false );
+
+    //Open up document/example
+    gallery.onclick = function() {
+        if (link) {
+            window.open(link);
+        }
+    };
 };
 
 //Creates all elements needed for each gallery
 function createGalleries() {
     var name = Object.keys(galleries)[currGal]; //Name of gallery
-    var list = galleries[name]; //Grabs the gallery's array
+    var list = galleries[name].images; //Grabs the gallery's array
     var frame = document.createElement('div'); //Creates container for gallery
     frame.className = "images";
     frame.style.backgroundImage = "url('assets/images/"+list[0]+"')"; //Preview of next image in gallery
@@ -96,7 +103,7 @@ function createGalleries() {
     function appear() {
         if (op >= 100) {
             clearInterval(apInt);
-            carousel(gallery,list);
+            carousel(gallery,list,galleries[name].link);
         }
         else {
             op++;
