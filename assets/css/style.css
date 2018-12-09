@@ -165,6 +165,7 @@ h2 {
 /* Changed the background of the text to stand out from the non-hovered items */
 .images:hover .imageLabel {
     background-color: #4AC199;
+    opacity: 0.7;
 }
 
 .images:hover .fading {

@@ -1,6 +1,6 @@
 // My carousel galleries
 var galleries = {
-    "Hangman":["abstract.jpg","abstract2.jpg","abstract3.jpg"],
+    "Hangman":["hangman.png","hangman2.png","hangman3.png"],
     "RPG Game":["abstract4.jpg","abstract5.jpg","cloudy.png"],
     "Trivia Game":["fish.jpg","idk.jpg","diamond.jpg"],
     "Rock Paper Scissors":["football.jpg","basketball.jpg","ball.jpg"],
