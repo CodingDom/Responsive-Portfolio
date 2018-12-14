@@ -1,7 +1,7 @@
 // My carousel galleries
 var galleries = {
     "Hangman":{link:'https://codingdom.github.io/Word-Guess-Game/',images:["hangman3.png","hangman2.png","hangman.png"]},
-    "RPG Game":{images:["abstract4.jpg","abstract5.jpg","cloudy.png"]},
+    "RPG Game":{link:'https://codingdom.github.io/unit-4-game',images:["rpg2.png","rpg3.png","rpg.jpg"]},
     "Trivia Game":{images:["fish.jpg","idk.jpg","diamond.jpg"]},
     "Rock Paper Scissors":{images:["football.jpg","basketball.jpg","ball.jpg"]},
     "Rutgers Info Widget":{images:["bear.jpg","wolf.jpg","tiger.jpg"]}
