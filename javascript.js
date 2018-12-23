@@ -2,7 +2,7 @@
 var galleries = {
     "Hangman":{link:'https://codingdom.github.io/Word-Guess-Game/',images:["hangman3.png","hangman2.png","hangman.png"]},
     "RPG Game":{link:'https://codingdom.github.io/unit-4-game',images:["rpg2.png","rpg3.png","rpg.jpg"]},
-    "Trivia Game":{images:["fish.jpg","idk.jpg","diamond.jpg"]},
+    "Trivia Game":{link:'https://codingdom.github.io/TriviaGame',images:["trivia2.jpg","trivia3.jpg","trivia.jpg"]},
     "Rock Paper Scissors":{images:["football.jpg","basketball.jpg","ball.jpg"]},
     "Rutgers Info Widget":{images:["bear.jpg","wolf.jpg","tiger.jpg"]}
 };
